@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,24 +44,9 @@
 <body>
     <div class="card">
         <div class="icon">✓</div>
-        <h1 id="title">邮箱验证成功</h1>
-        <p id="message">您的邮箱已完成验证，请返回 UNSEEN App 使用邮箱和密码登录。</p>
-        <a href="unseen://auth/callback" id="button">打开 UNSEEN</a>
+        <h1>Email Verified</h1>
+        <p>Your email has been verified. Please return to the UNSEEN app and sign in with your email and password.</p>
+        <a href="unseen://auth/callback">Open UNSEEN</a>
     </div>
-    <script>
-        (function() {
-            var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
-            var texts = {
-                zh: { title: '邮箱验证成功', message: '您的邮箱已完成验证，请返回 UNSEEN App 使用邮箱和密码登录。', button: '打开 UNSEEN' },
-                ja: { title: 'メール認証が完了しました', message: 'メールアドレスの確認が完了しました。UNSEEN アプリに戻り、メールとパスワードでログインしてください。', button: 'UNSEEN を開く' },
-                en: { title: 'Email Verified', message: 'Your email has been verified. Please return to the UNSEEN app and sign in with your email and password.', button: 'Open UNSEEN' }
-            };
-            var t = lang.startsWith('zh') ? texts.zh : (lang.startsWith('ja') ? texts.ja : texts.en);
-            document.getElementById('title').textContent = t.title;
-            document.getElementById('message').textContent = t.message;
-            document.getElementById('button').textContent = t.button;
-            document.documentElement.lang = lang.startsWith('zh') ? 'zh-CN' : (lang.startsWith('ja') ? 'ja' : 'en');
-        })();
-    </script>
 </body>
 </html>
